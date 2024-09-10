@@ -1,0 +1,130 @@
+.toggle-overlap{
+    background-color:rgba(0, 0, 0, 0.5 );
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+}
+.toggle-menu{
+    background-color: white;
+    width:20%;
+    padding:30px;
+}
+
+/* .toggle-overlap {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.toggle-overlap.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toggle-menu {
+    background-color: white;
+    width: 20%;
+    padding: 30px;
+    transform: translateX(100%); /* Start off-screen to the right 
+    transition: transform 0.5s ease; /* Smooth slide in/out
+}
+
+.toggle-overlap.open .toggle-menu {
+    transform: translateX(0); /* Slide into view
+} */
+
+.cart-title{
+    padding:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-title p{
+    margin:0;
+    font-size: 1.5rem;
+}
+.cart-title span{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+.cart-list{
+    margin-top: 20px;
+    width: 100%;
+}
+.cart-item{
+    padding:10px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#quantity{
+    background-color:rgba(100, 99, 99, 0.5);;
+    padding: 1px 4px;
+    border:none;
+    border-radius: 10px;
+}
+.item-name-and-item-price{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+.delete-button button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.checkout{
+    width: 100%;
+    margin-top: 20px;
+}
+.checkout-button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding-right: 10px;
+    cursor: pointer;
+    padding:8px;
+    text-decoration: none;
+}
+.checkout-text{
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+.ckeckout-price{
+    margin-left: 50px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 390px) {
+    .toggle-menu{
+        width:100%;
+    }
+}

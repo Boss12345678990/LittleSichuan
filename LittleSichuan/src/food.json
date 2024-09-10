@@ -1,0 +1,104 @@
+
+{
+    "bestsellers":[
+        { 
+            "name":"Kung Pao chicken",
+            "chinese":"宮保雞丁", 
+            "price": 16.99
+        },
+        {
+            "name":"Sliced beef in hot spicy sauce", 
+            "chinese":"夫妻肺片", 
+            "price": 24.99
+        },
+        {
+            "name":"Fried rice", 
+            "chinese":"炒飯", 
+            "price": 9.99
+        },
+        {
+            "name":"Ma Po tufo",
+            "chinese":"麻婆豆腐", 
+            "price": 19.99
+        }
+    ],
+
+    "stirfry":[
+        { 
+            "name":"Kung Pao chicken",
+            "chinese":"宮保雞丁", 
+            "price": 16.99
+        },
+        {
+            "name":"Sliced beef in hot spicy sauce", 
+            "chinese":"夫妻肺片", 
+            "price": 24.99
+        },
+        {
+            "name":"Fried rice", 
+            "chinese":"炒飯", 
+            "price": 9.99
+        },
+        {
+            "name":"Ma Po tufo",
+            "chinese":"麻婆豆腐", 
+            "price": 19.99
+        },
+        {
+            "name":"Fried rice", 
+            "chinese":"炒飯", 
+            "price": 9.99
+        },
+        {
+            "name":"Ma Po tufo",
+            "chinese":"麻婆豆腐", 
+            "price": 19.99
+        }
+    ],
+
+   "colddish":[
+        { 
+            "name":"Kung Pao chicken",
+            "chinese":"宮保雞丁", 
+            "price": 16.99
+        },
+        {
+            "name":"Sliced beef in hot spicy sauce", 
+            "chinese":"夫妻肺片", 
+            "price": 24.99
+        },
+        {
+            "name":"Fried rice", 
+            "chinese":"炒飯", 
+            "price": 9.99
+        },
+        {
+            "name":"Ma Po tufo",
+            "chinese":"麻婆豆腐", 
+            "price": 19.99
+        },
+        {
+            "name":"Ma Po tufo",
+            "chinese":"麻婆豆腐", 
+            "price": 19.99
+        }
+    ],
+    
+   "noodleandrice":[
+        { 
+            "name":"Kung Pao chicken",
+            "chinese":"宮保雞丁", 
+            "price": 16.99
+        },
+        {
+            "name":"Sliced beef in hot spicy sauce", 
+            "chinese":"夫妻肺片", 
+            "price": 24.99
+        },
+        {
+            "name":"Fried rice",
+            "chinese":"炒飯",
+            "price": 9.99
+        }
+    ]
+}

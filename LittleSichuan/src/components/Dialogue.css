@@ -1,0 +1,176 @@
+.overlap{
+    background-color:rgba(0, 0, 0, 0.5 );
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.container{
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    background-color: white;
+}
+.product-name2{
+    margin-bottom: 10px;
+    padding: 0px;
+}
+.product-name2 h3{
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h3-div{
+    display: flex;
+    align-items: center;
+}
+/* .product-name2 span{
+    margin-left: 5px;
+} */
+.product-name2 button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 60%;
+    font-size: 1.2rem;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+.product-name2 button:hover{
+    background-color: gray;
+    transition: background-color 0.3s ease;
+}
+.product-name2 p{
+    color: gray;
+}
+.product-operation{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.minus{ 
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+.minus:disabled{
+    cursor:default;
+}
+.minus:not(:disabled):hover{
+    background-color: gray;
+    transition: background-color 0.3s ease;
+}
+.number{
+    font-size: 1.2rem;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.plus{
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-left: 30px;
+}
+.plus:hover{
+    background-color: gray;
+    transition: background-color 0.3s ease;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    width: 62%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.text {
+    flex: 1;
+    text-align: center;
+}
+@media only screen and (min-width: 390px) {
+    .container {
+        width: 350px; /* Set a fixed width for larger screens */
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    .product-name2 h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .product-name2 p {
+        font-size: 1rem;
+        color: gray;
+        margin-bottom: 20px;
+    }
+
+    .product-operation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .minus, .plus {
+        width: 40px; /* Button size for plus and minus */
+        height: 40px;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number {
+        font-size: 1.2rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 220px; /* Adjusting width for button */
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .add .text {
+        font-size: 1rem;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .add .price {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+}
