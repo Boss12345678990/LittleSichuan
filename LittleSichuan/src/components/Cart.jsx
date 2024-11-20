@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import "./Cart.css"
@@ -36,34 +37,41 @@ export default function Cart({isCopen, close, foodlist, setFoodlist, setHnumber,
                             <div>
                                 <label htmlFor="quantity">
                                     <select value={data.quantity} name="quantity" id="quantity" onChange={(event) => handleChangeQuantity(data, index, event)}>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
+                                    {[...Array(11).keys()].map((num) => (
+                                        <option key={num} value={num}>
+                                        {num}
+                                        </option>
+                                    ))}
                                         <FontAwesomeIcon icon={faAngleDown}/>
                                     </select>
                                 </label>
                             </div>
                             <div className='item-name-and-item-price'>
                                 <p>{data.name}</p>
-                                <span>${data.price}</span>
+                                <span>${data.price - 0.01}</span>
                             </div>
                             <div className='delete-button'>
                                 <button onClick={() => handlecartdelete(index)}><FontAwesomeIcon icon={faTrash}/></button>
                             </div>
                         </li>    
                     ))}
-                        
                 </div>
                 <div className='checkout'>
-                    {foodlist.length === 0? null : <Link to="/checkout" style={{textDecoration:"none"}}><button className='checkout-button'><span className='ckeckout-text'>GO TO CHECKOUT</span><span className='ckeckout-price'>{subprice.toFixed(2)}</span></button></Link>}
+                {foodlist.length === 0? 
+                <div style={{display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center", paddingTop:"50px"}}>
+                    <FontAwesomeIcon icon={faCartShopping} style={{fontSize:"30px", marginBottom:"20px"}}/>
+                    <p>Please Select Items</p>
+                </div> : 
+                <Link to="/checkout" style={{textDecoration:"none"}}>
+                    <button className='checkout-button'>
+                        <span className='ckeckout-text'>
+                            GO TO CHECKOUT
+                        </span>
+                        <span className='ckeckout-price'>
+                            {subprice.toFixed(2)}
+                        </span>
+                    </button>
+                </Link>}
                 </div>
             </div>
         </div>

@@ -1,15 +1,30 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, DeleteDateColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from "typeorm";
+import ProductAndOrder from "./product-order";
 
-@Entity("Order")
+@Entity("order")
 export default class Order {
 
     @PrimaryGeneratedColumn()
-    orderId: number
+    id: number;
 
-    @Column()
-    phoneNumber: number
+    @Column({type:"varchar"})
+    phoneNumber: number;
 
     @Column("decimal")
-    totalPrice: number
+    totalPrice: number;
 
+    @Column("json")
+    orderItems: any;
+
+    @DeleteDateColumn({nullable: true})
+    deletedAt: Date;
+
+    @CreateDateColumn({nullable: true})
+    createdAt: Date;
+
+    @UpdateDateColumn({nullable: true})
+    updatedAt: Date;
+
+    @OneToMany(()=>ProductAndOrder, (product_order) =>product_order.orders)
+    productOrder: ProductAndOrder;
 }
