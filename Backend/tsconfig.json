@@ -1,15 +1,31 @@
+// {
+//    "compilerOptions": {
+//       "lib": [
+//          "es5",
+//          "es6"
+//       ],
+//       "allowSyntheticDefaultImports": true,
+//       "target": "ES2020",           
+//       "module": "ESNext",       
+//       "moduleResolution": "node",
+//       "outDir": "./build",
+//       "emitDecoratorMetadata": true,
+//       "experimentalDecorators": true,
+//       "sourceMap": true,
+//    }
+// }
 {
    "compilerOptions": {
-      "lib": [
-         "es5",
-         "es6"
-      ],
-      "target": "ES2020",           
-      "module": "ESNext",       
-      "moduleResolution": "node",
-      "outDir": "./build",
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "sourceMap": true,
-   }
-}
+     "lib": ["es2020"],  // Change this to match your target
+     "allowSyntheticDefaultImports": true,
+     "target": "ES2020",
+     "module": "ESNext",
+     "moduleResolution": "node",
+     "outDir": "./build",
+     "emitDecoratorMetadata": true,
+     "experimentalDecorators": true,
+     "sourceMap": true
+   },
+   "include": ["src/**/*.ts", "src/data-source.js"],
+  "exclude": ["node_modules"]
+ }

@@ -2,35 +2,61 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import postOrder from '../../utils/submitOrder'; 
 import "./CSS/Checkout.css"
 import { DataContext } from '../../components/StoreProvider/Store';
 import { useContext, useEffect, useState } from 'react';
+
 export default function Checkout(){
-    const {foodlist, Hnumber, subprice, setSubprice, Change} = useContext(DataContext);
+    const {foodlist, Hnumber, subprice, setSubprice, Change, setFoodlist,setHnumber} = useContext(DataContext);
     
     const [taxes, setTaxes] = useState(0);
     const [totalprice, setTotalprice] = useState(0);
     const [isOrder, setIsorder] = useState(false);
     const [isPhone, setIsphone] = useState(false);
     const [phonenumber, setPhonenumber] = useState("");
+    const navigate = useNavigate();
+    
     function handleChangeQuantity(data, index, event){
         Change(data, index, event);
     }
     function handleBlur(){
-        let string = phonenumber;
-        if(string.trim() === "" || string.trim().length !== 12 || 
-            isNaN(parseFloat(string.slice(0,3))) || isNaN(parseFloat(string.slice(4,7))) || isNaN(parseFloat(string.slice(8))) || string[3] !== "-" || string[7] !== "-"){
+        const phoneValid = !(phonenumber.trim() === "" || 
+                            phonenumber.trim().length !== 12 || 
+                            isNaN(parseFloat(phonenumber.slice(0,3))) || 
+                            isNaN(parseFloat(phonenumber.slice(4,7))) || 
+                            isNaN(parseFloat(phonenumber.slice(8))) || 
+                            phonenumber[3] !== "-" || 
+                            phonenumber[7] !== "-");
+
+        setIsphone(!phoneValid);
+    }
+    async function handleorder(){
+        const phoneValid = !(phonenumber.trim() === "" || 
+                         phonenumber.trim().length !== 12 || 
+                         isNaN(parseFloat(phonenumber.slice(0,3))) || 
+                         isNaN(parseFloat(phonenumber.slice(4,7))) || 
+                         isNaN(parseFloat(phonenumber.slice(8))) || 
+                         phonenumber[3] !== "-" || 
+                         phonenumber[7] !== "-");
+        if (!phoneValid) {
+            setIsphone(true);
+            return;
+        }
+        try {
+            await postOrder(foodlist, phonenumber, totalprice);
+            setIsorder(true);
+            setFoodlist([]);
+            setHnumber(0);
+            setPhonenumber("");
+            setTimeout(() => {
+                navigate("/");
+            }, 3000);
+        } catch (error) {
             setIsphone(true);
         }
-        else{
-            setIsphone(false);
-        }
     }
-    function handleorder(){
-        setIsorder(true);
-    }
-    
     useEffect(()=>{
         let sum = 0
         let total = foodlist.reduce((acc, cur) => acc + (cur.quantity * cur.price), sum);
@@ -96,7 +122,7 @@ export default function Checkout(){
                             </div>
                             <div className='item-name-and-item-price'>
                                 <p>{data.name}</p>
-                                <span>${data.price}</span>
+                                <span>${parseFloat(data.price).toFixed(2)}</span>
                             </div>
                         </li>    
                     ))}
