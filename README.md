@@ -3,8 +3,8 @@ A fully-featured and responsive web application that allows home-based chefs to 
 
 # Demos
 ### Main Page
-<img src="‎./LittleSichuan/src/assets/demo2.gif" alt="" width="700" />
-<img src="‎./LittleSichuan/src/assets/demo3.gif" alt="" width="700" />
+<img src="‎./LittleSichuan/src/assets/demo2.gif" alt="" width="600" />
+<img src="‎./LittleSichuan/src/assets/demo3.gif" alt="" width="600" />
 ### Checkout Page
 <img src="./LittleSichuan/src/assets/littlesichuan_checkout.png" alt="" width="700" />
 
