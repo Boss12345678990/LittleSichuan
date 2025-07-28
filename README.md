@@ -32,3 +32,5 @@ I was responsible for:
 - Implementing the checkout system and order persistence.
 - Creating RESTful APIs for product and order management.
 - Styling with responsiveness in mind using MUI and raw CSS.
+
+ [**Product Browsing Page**](#product-model)
