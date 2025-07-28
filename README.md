@@ -6,9 +6,9 @@ A fully-featured and responsive web application that allows home-based chefs to 
 
 # Design
 The LittleSichuan platform was designed with a focus on simplicity, responsiveness, and clear separation of concerns between frontend and backend.
-The frontend is built with [**React.js**], styled using [**MUI**] (Material UI) and custom inline/CSS module styles. The design follows a clean, modern look inspired by real-world food delivery platforms.
+The frontend is built with [**React.js**](#React.js), styled using [**MUI**](#MUI) (Material UI) and custom inline/CSS module styles. The design follows a clean, modern look inspired by real-world food delivery platforms.
 React Router enables a single-page application experience, and Context API is used to manage global state (such as cart contents) across pages.
-On the backend, a [**Node.js**] + [**Express.js**] server handles all API endpoints. [**TypeORM**] connects to a [**MySQL**] database and abstracts entity relationships.
+On the backend, a [**Node.js**](#Node.js) + [**Express.js**](#Express.j) server handles all API endpoints. [**TypeORM**](#TypeORM) connects to a [**MySQL**](#MySQL) database and abstracts entity relationships.
 All communication between frontend and backend is handled through Axios.
 
 # Features
