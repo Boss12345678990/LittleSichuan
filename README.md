@@ -1,8 +1,12 @@
 # LittleSichuan – Online Family Kitchen Platform
 A fully-featured and responsive web application that allows home-based chefs to list traditional Sichuan dishes and customers to browse, order, and track meals. This was a full-stack solo project inspired by the idea of supporting local family chefs and delivering authentic food experiences through a modern, easy-to-use interface.
 
-# Demo
-
+# Demos
+### Main Page
+<img src="‎./LittleSichuan/src/assets/demo2.gif" alt="" width="700" />
+<img src="‎./LittleSichuan/src/assets/demo3.gif" alt="" width="700" />
+### Checkout Page
+<img src="./LittleSichuan/src/assets/littlesichuan_checkout.png" alt="" width="700" />
 
 # Design
 The LittleSichuan platform was designed with a focus on simplicity, responsiveness, and clear separation of concerns between frontend and backend.
