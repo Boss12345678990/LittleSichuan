@@ -3,8 +3,14 @@ A fully-featured and responsive web application that allows home-based chefs to 
 
 # Demos
 ### Main Page
-<img src="‎./LittleSichuan/src/assets/demo2.gif" alt="" width="600" />
-<img src="‎./LittleSichuan/src/assets/demo3.gif" alt="" width="600" />
+This is the normal ordering procedure, where users can browse featured dishes, add them to the cart, and proceed to checkout in a smooth and intuitive flow.
+
+<img src="./LittleSichuan/src/assets/demo2.gif" alt="demo" width="600" />
+
+Users can quicklyfind specific dishes by typing keywords. The results update in real time to streamline the selection process, which enhances the ordering experience.
+
+<img src="./LittleSichuan/src/assets/demo3.gif" alt="" width="600" />
+
 ### Checkout Page
 <img src="./LittleSichuan/src/assets/littlesichuan_checkout.png" alt="" width="700" />
 
